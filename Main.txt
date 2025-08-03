@@ -1,0 +1,26 @@
+public void Main
+{  
+    public static void main( String[] args)
+   {  
+      
+       Rectangle rec1 = new Rectangle();
+       rec1.displaylength();
+       rec1.displaywidth();
+   }
+}
+class Rectangle
+{
+  // attributes
+    int length;
+    int width;
+
+  //methods
+  void displaylength()
+ {
+   System.out.println(" length = " + length);
+ }
+ void displaywidth()
+ {
+  System.out.println(" width = " + width);
+ }
+}

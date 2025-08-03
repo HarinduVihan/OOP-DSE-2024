@@ -1,0 +1,74 @@
+class Vehicle
+{
+	private String vid;
+	private String vname;
+	private int aq;
+	
+	public void setVehicleData(String i, String n, int q)
+	{
+		this.vid = i;
+		this.vname = n;
+		this.aq = q;
+	}
+	
+	public String getvid()
+	{
+		return vid;
+	}
+	public String getVname()
+	{
+		return vname;
+	}
+	public int getaq()
+	{
+		return aq;
+	}
+		
+}
+
+
+class Customer
+{
+	private String name;
+	private int id;
+	private int number;
+	private Vehicle iid;
+	
+	public void setCustomerData(String na, int ii, int num, String i, String n, int q)
+	{
+		this.name = na;
+		this.id = ii;
+		this.number = num;
+		this.iid = new Vehicle();
+		this.iid.setVehicleData(i, n, q);
+	}	
+	
+	public void Orderto(int orderq)
+	{
+		if(iid.getaq() > orderq)
+		{
+			System.out.println("*");
+			System.out.println("Order confirmed!");	
+			System.out.println("Vehicle ID - " + iid.getvid());
+			System.out.println("Vehicle name - " + iid.getVname());
+			System.out.println("Customer Name - " + name);
+			System.out.println("*");
+		}
+		else
+		{
+			System.out.println("*");
+			System.out.println("Sorry ! " + iid.getvid() + " vehicle is currently not available.");
+			System.out.println("*");
+		}
+	}	
+}
+
+public class deals101
+{
+	public static void main (String [] args)
+	{
+		Customer c1 = new Customer();
+		c1.setCustomerData("Kamara", 01, 0772352617, "V001", "Car", 2);
+		c1.Orderto(1);
+	}
+}

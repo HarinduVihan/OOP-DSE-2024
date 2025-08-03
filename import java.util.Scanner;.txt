@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ConstruterExample
+{
+	public static void main(
+
+class Employee
+{
+	//create attributes
+	private int empnum;
+	private String name;
+
+	Scanner imput = new Scanner(System.in);
+
+	//construter
+	public Employee()
+	{
+		empnum = 0;
+		name = null;
+	}
+
+	//methods
+	public void getinput()
+	{
+		 System.out.println("enter employee number: ");
+         	empnum = imput.nextInt();
+		 System.out.println("enter employee name: ");
+         	empnum = imput.nextLine();
+	}
+
+	public void display()
+	{
+		System.out.println("Employee number: " + empnum);
+		System.out.println("Employee name: "+ name);
+	}
+}
+	
